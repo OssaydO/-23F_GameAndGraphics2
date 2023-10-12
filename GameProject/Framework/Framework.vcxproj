@@ -86,18 +86,27 @@
     <ClInclude Include="Source\Framework.h" />
     <ClInclude Include="Source\FWCore.h" />
     <ClInclude Include="Source\FWWindows.h" />
+    <ClInclude Include="Source\GameCore.h" />
     <ClInclude Include="Source\GL\glext.h" />
     <ClInclude Include="Source\GL\GLExtensions.h" />
     <ClInclude Include="Source\GL\MyGLContext.h" />
     <ClInclude Include="Source\GL\wglext.h" />
     <ClInclude Include="Source\GL\WGLExtensions.h" />
+    <ClInclude Include="Source\Math\vec2.h" />
+    <ClInclude Include="Source\Mesh.h" />
+    <ClInclude Include="Source\Utility\ShaderProgram.h" />
+    <ClInclude Include="Source\Utility\Utility.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\FWCore.cpp" />
     <ClCompile Include="Source\FWWindows.cpp" />
+    <ClCompile Include="Source\GameCore.cpp" />
     <ClCompile Include="Source\GL\GLExtensions.cpp" />
     <ClCompile Include="Source\GL\MyGLContext.cpp" />
     <ClCompile Include="Source\GL\WGLExtensions.cpp" />
+    <ClCompile Include="Source\Mesh.cpp" />
+    <ClCompile Include="Source\Utility\ShaderProgram.cpp" />
+    <ClCompile Include="Source\Utility\Utility.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

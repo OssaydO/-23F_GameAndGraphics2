@@ -7,6 +7,12 @@
     <Filter Include="Source\GL">
       <UniqueIdentifier>{d4bb819d-2c10-4b22-a84b-7d2ad0261f11}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Utility">
+      <UniqueIdentifier>{5fe8f2c3-b371-4841-b720-a4a576eb24df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Math">
+      <UniqueIdentifier>{ea01aded-3135-49d4-83c6-c3295bb925c0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\CoreHeaders.h">
@@ -36,6 +42,21 @@
     <ClInclude Include="Source\FWWindows.h">
       <Filter>Source</Filter>
     </ClInclude>
+    <ClInclude Include="Source\GameCore.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Mesh.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utility\ShaderProgram.h">
+      <Filter>Source\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utility\Utility.h">
+      <Filter>Source\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Math\vec2.h">
+      <Filter>Source\Math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\FWCore.cpp">
@@ -52,6 +73,18 @@
     </ClCompile>
     <ClCompile Include="Source\FWWindows.cpp">
       <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameCore.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Mesh.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utility\ShaderProgram.cpp">
+      <Filter>Source\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utility\Utility.cpp">
+      <Filter>Source\Utility</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

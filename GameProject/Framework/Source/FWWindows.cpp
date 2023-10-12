@@ -10,9 +10,11 @@
 #include "CoreHeaders.h"
 
 #include "FWWindows.h"
+#include "GameCore.h"
 #include "GL/GLExtensions.h"
 #include "GL/WGLExtensions.h"
 #include "GL/MyGLContext.h"
+#include "Utility/Utility.h"
 
 namespace fw {
 
@@ -36,11 +38,15 @@ FWWindows::~FWWindows()
     delete m_pMyGLContext;
 }
 
-int FWWindows::Run()
+int FWWindows::Run(GameCore* pGame)
 {
+    m_pCurrentRunningGame = pGame;
+
     // Main loop.
     MSG message;
     bool done = false;
+
+    double previousTime = GetHighPrecisionTimeSinceGameStarted();
 
     while( !done )
     {
@@ -58,6 +64,13 @@ int FWWindows::Run()
         }
         else
         {
+            double currentTime = GetHighPrecisionTimeSinceGameStarted();
+            float deltaTime = (float)(currentTime - previousTime);
+            previousTime = currentTime;
+
+            pGame->Update( deltaTime );
+            pGame->Draw();
+
             // Backup the state of the keyboard and mouse.
             for( int i=0; i<256; i++ )
                 m_OldKeyStates[i] = m_KeyStates[i];
@@ -412,6 +425,8 @@ LRESULT CALLBACK FWWindows::WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM 
                     PostQuitMessage( 0 );
 
                 pFWWindows->m_KeyStates[wParam] = true;
+
+                pFWWindows->m_pCurrentRunningGame->OnKeyDown( (int)wParam );
             }
         }
         return 0;
@@ -419,6 +434,7 @@ LRESULT CALLBACK FWWindows::WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM 
     case WM_KEYUP:
         {
             pFWWindows->m_KeyStates[wParam] = false;
+            pFWWindows->m_pCurrentRunningGame->OnKeyUp( (int)wParam );
         }
         return 0;
 

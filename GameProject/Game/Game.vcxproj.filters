@@ -4,10 +4,35 @@
     <Filter Include="Source">
       <UniqueIdentifier>{752151e8-9865-46ec-8a11-12eb10f71741}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{e86c0217-1e08-47d9-87ab-f380810e0eef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data\Shaders">
+      <UniqueIdentifier>{baf660a8-7ef9-4695-867c-c793ea6dfcd4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\GameSurvivors.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\GameSurvivors.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DataTypes.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Shaders\Basic.vert">
+      <Filter>Data\Shaders</Filter>
+    </None>
+    <None Include="Data\Shaders\White.frag">
+      <Filter>Data\Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

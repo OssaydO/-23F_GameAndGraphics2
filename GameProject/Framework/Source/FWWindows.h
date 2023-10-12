@@ -21,7 +21,7 @@ public:
     FWWindows(int width, int height);
     virtual ~FWWindows();
 
-    virtual int Run() override;
+    virtual int Run(GameCore* pGame) override;
 
     virtual bool IsKeyDown(int value) override;
     virtual bool IsMouseButtonDown(int id) override;
@@ -48,6 +48,8 @@ protected:
     HDC m_hDeviceContext = nullptr;
     HINSTANCE m_hInstance = nullptr;
     MyGLContext* m_pMyGLContext = nullptr;
+
+    GameCore* m_pCurrentRunningGame = nullptr;
 
     bool m_KeyStates[256] = {};
     bool m_MouseButtonStates[3] = {};

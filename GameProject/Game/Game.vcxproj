@@ -11,12 +11,21 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\GameSurvivors.cpp" />
     <ClCompile Include="Source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.vcxproj">
       <Project>{3d8576a6-2efc-43fb-901a-1bb6e736ec44}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\DataTypes.h" />
+    <ClInclude Include="Source\GameSurvivors.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Shaders\Basic.vert" />
+    <None Include="Data\Shaders\White.frag" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
